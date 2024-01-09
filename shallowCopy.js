@@ -16,14 +16,16 @@ let original = {
 
 // let copy = { ...original } //shallow copy
 
-let copy = JSON.parse(JSON.stringify(original)); //deep copy
+// let copy = JSON.parse(JSON.stringify(original)); //deep copy
+
+let copy = structuredClone(original);
 
 copy.name = "Harshit";
 copy.age = 23;
 copy.languages.language1 = "spanish";
 copy.languages.language2 = "french";
 
-copy.createdAt = new Date(copy.createdAt);
+// copy.createdAt = new Date(copy.createdAt);
 
 
 // let copy = Object.assign([], original);
@@ -44,3 +46,22 @@ console.log("Copy", copy);
 // let arr2 = [4, 5, 6];
 
 // let arr3 = [...arr1, ...arr2];
+
+let user = {
+    email: "user@email.com",
+    phone: "9999999999",
+    signedUpDate: new Date(),
+    skills: {
+        language1: "JAVA",
+        language2: "Python"
+    }
+}
+
+
+let myString = JSON.stringify(user);
+
+let copyOfUser = JSON.parse(myString);
+copyOfUser.email = "user2@email.com";
+copyOfUser.skills.language1 = "C++";
+copyOfUser.skills.language2 = "JS";
+
