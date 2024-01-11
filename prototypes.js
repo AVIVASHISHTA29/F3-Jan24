@@ -75,6 +75,7 @@ let functionsObj = {
 }
 
 
+
 let obj1 = {
     name: "avi",
     email: "avi@gmail.com",
