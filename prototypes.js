@@ -93,7 +93,7 @@ let obj3 = {
     __proto__: functionsObj
 }
 
-console.log(obj1)
+// console.log(obj1)
 
 
 let grandfather = {
@@ -109,11 +109,21 @@ let myFather = {
 
 
 let me = {
+    name: "myself",
     __proto__: myFather,
     // house: myFather.__proto__.house,
 }
 
 
-console.log(grandfather.house);
-console.log(myFather.house);
-console.log(me.house);
+// console.log(grandfather.house);
+// console.log(myFather.house);
+console.log(me);
+
+console.log([1, 2, 3]);
+
+
+function myFunc() {
+    console.log("HI")
+}
+
+console.log(myFunc.prototype);

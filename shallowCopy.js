@@ -8,7 +8,7 @@ let original = {
     createdAt: new Date(),
 };
 
-//let copy = original;
+// let copy = original;
 
 // let original = [1, 2, 3];
 // let copy = { ...original, languages: { ...original.languages } };
@@ -16,16 +16,19 @@ let original = {
 
 // let copy = { ...original } //shallow copy
 
-// let copy = JSON.parse(JSON.stringify(original)); //deep copy
+let copy1 = JSON.parse(JSON.stringify(original)); //deep copy
+console.log("Copy 1", copy1)
+
 
 let copy = structuredClone(original);
+console.log("Copy 2", copy)
 
 copy.name = "Harshit";
 copy.age = 23;
 copy.languages.language1 = "spanish";
 copy.languages.language2 = "french";
 
-// copy.createdAt = new Date(copy.createdAt);
+copy.createdAt = new Date(copy.createdAt);
 
 
 // let copy = Object.assign([], original);
