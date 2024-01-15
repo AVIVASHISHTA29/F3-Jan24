@@ -29,8 +29,6 @@
 // Class -> Structure/BluePrint/Skeleton
 
 
-
-
 class User {
 
     constructor(myName, myEmail, myMobile) {
@@ -40,6 +38,14 @@ class User {
         this.mobileNumber = myMobile;
         this.createdAt = new Date();
         this.language = "en";
+    }
+
+    get lowerCaseName() {
+        return this.name.toLowerCase();
+    }
+
+    getName() {
+        return `This is my name - ${this.name}`
     }
 
     showAllInfo() {
@@ -60,8 +66,14 @@ class User {
         return `my name is ${this.name}`;
     }
 
-    get upperCaseName() {
-        return this.name.toUpperCase();
+    get formattedDate() {
+        return this.createdAt.getDate() + "/" + (this.createdAt.getMonth() + 1) + "/" + this.createdAt.getFullYear();
+    }
+
+    set setName(newName) {
+        //manipulation of new Name.
+        let upperCaseName = newName.toUpperCase();
+        this.name = upperCaseName;
     }
 
 }
@@ -72,11 +84,13 @@ let user2 = new User("Vipul", "vipul@gmail.com", "8888888888");
 let user3 = new User("Kanhaiya", "kanhaiya@gmail.com", "7777777777");
 
 
-user1.name = "Anusha";
-user1.email = "anusha@gmail.com";
-user1.abc = "def"
-user1.phoneNumber = user1.mobileNumber;
+user1.setName = "anushka";
+// user1.email = "anusha@gmail.com";
+// user1.abc = "def"
+// user1.phoneNumber = user1.mobileNumber;
 
 console.log(user1)
-console.log(user1.updateCreatedAt(new Date(1)));
-console.log(user1.updateName("Aviiii"));
+console.log(user1.getName());
+console.log(user1.lowerCaseName);
+// console.log(user1.updateCreatedAt(new Date(1)));
+// console.log(user1.updateName("Aviiii"));

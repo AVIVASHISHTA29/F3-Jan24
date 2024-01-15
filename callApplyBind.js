@@ -42,3 +42,19 @@ let obj3 = {
 let obj3ShowEverything = obj2.showEverything.bind(obj3, "Sydney", "Australia");
 
 console.log(obj3ShowEverything())
+
+
+//  In bind method
+// let obj_test = {
+//     a: 10,
+// }
+
+// function f1() {
+//     console.log(this);
+//     return "hi";
+// }
+
+// let f2 = f1.call(obj_test);
+
+// console.log("my new f2", f2);
+
