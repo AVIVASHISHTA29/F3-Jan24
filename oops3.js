@@ -15,8 +15,8 @@ class UtilityFunctions {
 }
 
 
-let obj = new UtilityFunctions();
-obj.sum();
+// let obj = new UtilityFunctions();
+// obj.sum();
 
 console.log(UtilityFunctions.sum(10, 20))
 console.log(UtilityFunctions.a)
