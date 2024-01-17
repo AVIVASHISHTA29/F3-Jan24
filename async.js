@@ -1,14 +1,14 @@
-// setTimeout(() => {
-//     console.log("1", new Date())
-// }, 1000);
+setTimeout(() => {
+    console.log("1", new Date())
+}, 1000);
 
-// setTimeout(() => {
-//     console.log("2", new Date())
-// }, 0);
+setTimeout(() => {
+    console.log("2", new Date())
+}, 0);
 
-// setTimeout(() => {
-//     console.log("3", new Date())
-// }, 2000);
+setTimeout(() => {
+    console.log("3", new Date())
+}, 2000);
 
 
 
@@ -20,9 +20,9 @@
 // console.log("0");
 // console.log("1");
 
-setTimeout(() => {
-    console.log("2");
-}, 0);
+// setTimeout(() => {
+//     console.log("2");
+// }, 0);
 
 // // 1sec = 1000 milliseconds
 // console.log("3");
