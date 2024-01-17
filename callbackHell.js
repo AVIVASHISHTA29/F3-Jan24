@@ -135,3 +135,12 @@
 //         });
 //     }
 // })
+
+
+
+
+//make this flow of code -?
+
+// fnc1 -> 1000 and it will call fnc2 and it will pass {name:"avi"}
+//fnc2 -> 2000 and it will call fnc3 and it will edit the passed obj into {name:"avi",age:22}
+//fnc3
