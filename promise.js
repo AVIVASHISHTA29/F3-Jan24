@@ -106,3 +106,4 @@ myPromise1().then((data1) => {
 
 
 
+//avoid callback hell using promise chains
