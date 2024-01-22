@@ -1,56 +1,56 @@
 // //converting callback hell into promise chain
 
-// function greet() {
-//     return new Promise((resolve, reject) => {
-//         setTimeout(() => {
-//             resolve("Hello, welcome to restaurant!");
-//         }, 1000)
-//     })
-// }
+function greet() {
+    return new Promise((resolve, reject) => {
+        setTimeout(() => {
+            resolve("Hello, welcome to restaurant!");
+        }, 1000)
+    })
+}
 
-// function giveMenu() {
-//     return new Promise((resolve, reject) => {
-//         setTimeout(() => {
-//             resolve("Here is the Menu, please order food...");
-//         }, 500);
-//     })
-// }
+function giveMenu() {
+    return new Promise((resolve, reject) => {
+        setTimeout(() => {
+            resolve("Here is the Menu, please order food...");
+        }, 500);
+    })
+}
 
-// function askOrder() {
-//     return new Promise((resolve, reject) => {
-//         setTimeout(() => {
-//             resolve("What is your order?")
-//         }, 2000);
-//     })
+function askOrder() {
+    return new Promise((resolve, reject) => {
+        setTimeout(() => {
+            resolve("What is your order?")
+        }, 2000);
+    })
 
-// }
+}
 
-// function giveFood() {
-//     return new Promise((resolve, reject) => {
-//         setTimeout(() => {
-//             resolve("Here is your food...")
-//         }, 2500);
-//     })
+function giveFood() {
+    return new Promise((resolve, reject) => {
+        setTimeout(() => {
+            resolve("Here is your food...")
+        }, 2500);
+    })
 
-// }
+}
 
-// function billing() {
-//     return new Promise((resolve, reject) => {
-//         setTimeout(() => {
-//             resolve("Here is your bill...")
-//         }, 1000);
-//     })
+function billing() {
+    return new Promise((resolve, reject) => {
+        setTimeout(() => {
+            resolve("Here is your bill...")
+        }, 1000);
+    })
 
-// }
+}
 
-// function bye() {
-//     return new Promise((resolve, reject) => {
-//         setTimeout(() => {
-//             resolve("Thanks for visiting!")
-//         }, 500);
-//     })
+function bye() {
+    return new Promise((resolve, reject) => {
+        setTimeout(() => {
+            resolve("Thanks for visiting!")
+        }, 500);
+    })
 
-// }
+}
 
 // greet().then((data1) => {
 //     console.log(data1);
@@ -70,6 +70,18 @@
 // }).then((data6) => {
 //     console.log(data6)
 // });
+
+// async function myFnc() {
+
+//     const data1 = await greet();
+//     const data2 = await giveMenu();
+//     const data3 = await askOrder();
+//     const data4 = await giveFood();
+//     const data5 = await billing();
+//     const data6 = await bye();
+// }
+
+// myFnc();
 
 
 
@@ -204,19 +216,19 @@ function step3(data) {
 // .catch ((err) => console.log(err));
 
 
-async function handlePromises() {
-    try {
-        let data1 = await step1();
-        let data2 = await step2(data1);
-        let data3 = await step3(data2);
-        console.log(data3);
-    } catch (err) {
-        console.log(err)
-    }
-}
+// async function handlePromises() {
+//     try {
+//         let data1 = await step1();
+//         let data2 = await step2(data1);
+//         let data3 = await step3(data2);
+//         console.log(data3);
+//     } catch (err) {
+//         console.log(err)
+//     }
+// }
 
 
-handlePromises();
+// handlePromises();
 
 
 

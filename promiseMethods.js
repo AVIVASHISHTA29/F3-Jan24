@@ -77,10 +77,16 @@ console.log("code started at", new Date());
 
 // ALL SETTLED
 
-// Promise.allSettled([promise1(), promise2(), promise3()]).then((arr) => {
-//     console.log(arr, new Date());
-// })
+Promise.allSettled([promise1(), promise2(), promise3()]).then((arr) => {
+    console.log(arr, new Date());
+})
 
+async function handlePromise() {
+    let arr = await Promise.allSettled([promise1(), promise2(), promise3()])
+    console.log(arr, new Date());
+}
+
+handlePromise()
 
 // promise1().then((data) => {
 //     console.log(data, new Date());
