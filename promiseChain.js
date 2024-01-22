@@ -179,6 +179,7 @@ function step2(data) {
             console.log("Step 2 ...")
             data = { ...data, step2: "Put Maggi - Done" };
             resolve(data);
+            // reject("Rejected!")
         }, 2000);
     })
 }
@@ -196,11 +197,26 @@ function step3(data) {
 
 
 
-step1()
-    .then((data1) => step2(data1))
-    .then((data2) => step3(data2))
-    .then((data3) => console.log(data3))
-    .catch((err) => console.log(err));
+// step1()
+//     .then((data1) => step2(data1))
+//     .then((data2) => step3(data2))
+//     .then((data3) => console.log(data3))
+// .catch ((err) => console.log(err));
+
+
+async function handlePromises() {
+    try {
+        let data1 = await step1();
+        let data2 = await step2(data1);
+        let data3 = await step3(data2);
+        console.log(data3);
+    } catch (err) {
+        console.log(err)
+    }
+}
+
+
+handlePromises();
 
 
 

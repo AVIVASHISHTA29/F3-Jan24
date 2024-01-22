@@ -33,7 +33,7 @@ function TakeOrder(foodArr) {
 }
 
 
-function getMenu() {
+async function getMenu() {
     fetch("https://raw.githubusercontent.com/saksham-accio/f2_contest_3/main/food.json")
         .then((res) => res.json())
         .then((data) => {
@@ -42,6 +42,12 @@ function getMenu() {
         })
         .then((foodItems) => orderPrep(foodItems))
         .then((orderPrepOutput) => console.log(orderPrepOutput))
+
+
+    // let res = await fetch("https://raw.githubusercontent.com/saksham-accio/f2_contest_3/main/food.json")
+    // let data = await res.json();
+    // let foodItems = await TakeOrder(data);
+    // let orderPrepOutput = await orderPrep(foodItems);
 
 }
 
