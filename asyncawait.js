@@ -45,3 +45,7 @@ handlePromise();
 // }
 
 // getData();
+
+// const myFnc = async () => {
+
+// }
