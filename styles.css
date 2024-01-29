@@ -1,6 +1,6 @@
-.loader {
-  border: 16px solid #f3f3f3; /* Light grey */
-  border-top: 16px solid #3498db; /* Blue */
+/* .loader {
+  border: 16px solid #f3f3f3;
+  border-top: 16px solid #3498db;
   border-radius: 50%;
   width: 120px;
   height: 120px;
@@ -31,4 +31,12 @@
 body {
   height: 300vh;
   overflow-y: auto;
+} */
+
+div {
+  min-width: 100px;
+  min-height: 100px;
+  margin: 10px;
+  padding: 10px;
+  border: 1px solid #000;
 }
